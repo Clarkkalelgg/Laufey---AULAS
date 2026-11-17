@@ -1,0 +1,422 @@
+/* ==========================================
+   CONFIGURAÇÕES GERAIS
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #F5EBD5;
+    color: #493323;
+    font-family: Georgia, serif;
+}
+
+
+/* ==========================================
+   CABEÇALHO
+========================================== */
+
+header {
+    text-align: center;
+    padding: 35px;
+}
+
+header h1 {
+    font-size: 48px;
+    margin-bottom: 5px;
+    color: #493323;
+}
+
+header p {
+    color: #A8794F;
+    font-style: italic;
+}
+
+
+/* ==========================================
+   MENU DE NAVEGAÇÃO
+========================================== */
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    background-color: #E8D49A;
+    width: fit-content;
+
+    margin: 25px auto 55px;
+    padding: 12px 25px;
+
+    border-radius: 50px;
+}
+
+nav a {
+    color: #493323;
+    text-decoration: none;
+
+    padding: 8px 14px;
+    border-radius: 30px;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #A8794F;
+    color: #FFF8EA;
+}
+
+
+/* ==========================================
+   APRESENTAÇÃO
+========================================== */
+
+#apresentacao {
+    text-align: center;
+    padding: 40px 20px 70px;
+}
+
+#apresentacao span {
+    color: #A8794F;
+    font-size: 12px;
+    letter-spacing: 4px;
+}
+
+#apresentacao h2 {
+    font-size: 45px;
+    margin: 15px 0;
+}
+
+#apresentacao p {
+    color: #A8794F;
+    font-style: italic;
+    font-size: 16px;
+}
+
+
+/* ==========================================
+   BIOGRAFIA
+========================================== */
+
+#biografia {
+    max-width: 1150px;
+    margin: auto;
+    padding: 30px 35px 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 65px;
+}
+
+
+/* Imagem principal */
+
+.biografia-imagem {
+    flex: 1;
+
+    opacity: 0;
+    transform: translateX(-70px);
+
+    transition: opacity 1.2s ease,
+                transform 1.2s ease;
+}
+
+.biografia-imagem img {
+    width: 100%;
+    max-width: 450px;
+
+    display: block;
+    margin: auto;
+
+    border-radius: 12px;
+    box-shadow: 13px 13px 0 #E8D49A;
+}
+
+/* Classe da animação */
+
+.biografia-imagem.visivel {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/* Texto biográfico */
+
+.biografia-texto {
+    flex: 1;
+    max-width: 520px;
+    line-height: 1.9;
+}
+
+.biografia-texto h2 {
+    font-size: 34px;
+    margin-bottom: 22px;
+}
+
+.biografia-texto p {
+    color: #70543F;
+    font-size: 15px;
+    margin-bottom: 17px;
+    text-align: justify;
+}
+
+
+/* ==========================================
+   TRAJETÓRIA MUSICAL
+========================================== */
+
+#trajetoria {
+    background-color: #EFE0C2;
+    padding: 85px 10%;
+    text-align: center;
+}
+
+#trajetoria h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+#trajetoria p {
+    max-width: 850px;
+    margin: 18px auto;
+
+    color: #70543F;
+    line-height: 1.9;
+    text-align: justify;
+}
+
+
+/* Imagem da trajetória */
+
+.trajetoria-imagem {
+    max-width: 650px;
+    margin: 45px auto 0;
+
+    opacity: 0;
+    transform: translateY(35px);
+
+    transition: 1s ease;
+}
+
+.trajetoria-imagem img {
+    width: 100%;
+    display: block;
+
+    border-radius: 12px;
+    box-shadow: 10px 10px 0 #D8BD83;
+}
+
+.trajetoria-imagem.visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ==========================================
+   IDENTIDADE MUSICAL
+========================================== */
+
+#identidade-musical {
+    max-width: 900px;
+    margin: auto;
+    padding: 90px 30px;
+
+    text-align: center;
+}
+
+#identidade-musical h2 {
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+
+#identidade-musical p {
+    color: #70543F;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+
+/* ==========================================
+   PRÊMIOS E CONQUISTAS
+========================================== */
+
+#premios {
+    background-color: #EFE0C2;
+    padding: 85px 8%;
+    text-align: center;
+}
+
+#premios h2 {
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+#premios > p {
+    color: #8D6B4F;
+    margin-bottom: 40px;
+    line-height: 1.7;
+}
+
+
+/* Cartões individuais */
+
+.premio {
+    display: inline-block;
+    vertical-align: top;
+
+    width: 45%;
+    min-height: 190px;
+
+    margin: 10px;
+    padding: 28px;
+
+    text-align: left;
+
+    background-color: #F5EBD5;
+    border: 1px solid #E2C991;
+    border-radius: 14px;
+
+    transition: 0.3s;
+}
+
+.premio:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 12px 25px
+    rgba(73, 51, 35, 0.12);
+}
+
+.premio h3 {
+    font-size: 22px;
+    margin-bottom: 14px;
+}
+
+.premio p {
+    color: #70543F;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+
+/* Imagens dentro dos cartões */
+
+.premio img {
+    max-width: 100%;
+    max-height: 220px;
+
+    object-fit: contain;
+
+    display: block;
+    margin: 20px auto 0;
+
+    border-radius: 8px;
+}
+
+
+/* ==========================================
+   RODAPÉ
+========================================== */
+
+footer {
+    background-color: #493323;
+    color: #F5EBD5;
+
+    text-align: center;
+    padding: 35px 20px;
+}
+
+footer p {
+    color: #E8D49A;
+    margin-bottom: 12px;
+}
+
+footer a {
+    color: #FFF8EA;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: #E8D49A;
+}
+
+
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
+
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 38px;
+    }
+
+    #apresentacao h2 {
+        font-size: 34px;
+    }
+
+    #biografia {
+        flex-direction: column;
+        gap: 40px;
+        padding: 25px 7% 65px;
+    }
+
+    .biografia-imagem,
+    .biografia-texto {
+        width: 100%;
+    }
+
+    .biografia-texto h2 {
+        font-size: 29px;
+    }
+
+    #trajetoria {
+        padding: 60px 7%;
+    }
+
+    #identidade-musical {
+        padding: 60px 7%;
+    }
+
+    #premios {
+        padding: 60px 6%;
+    }
+
+    .premio {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+}
+
+
+/* ==========================================
+   TELAS PEQUENAS
+========================================== */
+
+@media (max-width: 400px) {
+
+    nav {
+        gap: 5px;
+        padding: 10px;
+    }
+
+    nav a {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+
+    #apresentacao h2 {
+        font-size: 29px;
+    }
+
+}
